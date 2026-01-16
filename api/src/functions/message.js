@@ -6,6 +6,6 @@ app.http('message', {
     handler: async (request, context) => {
         const connectionString = process.env.DATABASE_CONNECTION_STRING;
         context.log('Connection string:', connectionString);        
-        return { body: JSON.stringify({ "text": `Hello, from the API!!X` }) };
+        return { body: JSON.stringify({ "text": `Hello, from the API!!X. Connection string: ${connectionString}` }) };
     }
 });
